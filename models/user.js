@@ -10,59 +10,12 @@ const { profile } = require('console');
     INSERT NEW INFOMATION USER TO DATABASE 
 */
 module.exports = class user extends USER_COLL{
-    static insertNewUserToDatabase({ name, username,password, email}){
-        return new Promise( async resolve =>{
-            try {
-                    let checkExit = await USER_COLL.findOne({ username });
-                    if( checkExit ) 
-                    {
-                        return resolve({ error : true, message : 'exist'});
-                    }
-                    let hassPass = await hash( password , 8);
-                    let newUser = new USER_COLL({ name, username, password : hassPass, email })
-                    let infoUserAfterInsert = await newUser.save();
-                    if( !infoUserAfterInsert ) 
-                    {
-                        return resolve({ error : true, message : 'can not insert' });
-                    }
-                    return resolve({ error : false , data : infoUserAfterInsert});
-            } catch ( error ) {
-                return resolve({ error : true, message : error.message})
-            }
-        })
-    }
-
+    
 /*
     INSERT NEW INFOMATION USER TO DATABASE 
 */
 
-    static singIn({ username, password }) {
-        return new Promise(async resolve =>{
-            try {
-                    let checkExit = await USER_COLL.findOne({ username });
-
-                    if( !checkExit ) return resolve({ error : true, message : 'UserName not exist'});
-
-                    let passWord = checkExit.password;
-
-                    let checkpass = await compare( password, passWord);
-                    if( !checkpass ) 
-                    {
-                            return resolve({ error: true , message: 'wrong pass'});
-                    }
-                    
-                    //tao token 
-                    await delete checkExit.password;
-                    
-                    let token = await sign( { data:checkExit } );
-                    
-                    return resolve( { error : false , data:{checkExit, token} } );
-            } catch ( error ) {
-                return resolve({ error: true, message: error.message} )
-            }
-        })
-    }
-
+   
 /*
         GET LIST INFORMATION USER FROM DATABASE IN TABLE USER
 */
