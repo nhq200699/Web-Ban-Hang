@@ -109,7 +109,7 @@ module.exports = class category extends CATEGORY_COLL{
     }
 
 /*
-      SEARCH CATEGORY FROM DATABASE MONGODB 
+      Tìm kiếm danh mục. 
 */
 
     static search( search ){
