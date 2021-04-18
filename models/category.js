@@ -11,7 +11,7 @@ const {renderToView} = require('../utils/checkRouting');
 module.exports = class category extends CATEGORY_COLL{
 
 /*  
-    INSERT CATEGORY INTO DATABASE 
+    Thêm danh mục mới. 
 */
                     
     static insertCategoryIntoDataBase({ title , description }){
