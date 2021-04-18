@@ -37,7 +37,7 @@ module.exports = class category extends CATEGORY_COLL{
     }
 
  /*  
-    GET LIST CATEGORY FROM DATABASE MONGODB 
+    Lấy danh sách danh mục 
 */
 
     static getList(){
@@ -54,7 +54,7 @@ module.exports = class category extends CATEGORY_COLL{
     }
 
 /*
-        GET DETAIL CATEGORY FROM DATABASE MONGODB 
+        lấy chi tiết danh mục 
 */
 
     static getId({ id }){
