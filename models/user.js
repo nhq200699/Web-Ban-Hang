@@ -17,7 +17,7 @@ module.exports = class user extends USER_COLL{
 
    
 /*
-        GET LIST INFORMATION USER FROM DATABASE IN TABLE USER
+        Lấy thông tin danh sách người dùng
 */
     static getList(){
         return new Promise(async resolve =>{
@@ -34,7 +34,7 @@ module.exports = class user extends USER_COLL{
         })
     }
  /*
-        GET ONE OBJECT  INFOMATION USER IN DATABASE
+        Lấy thông tin của 1 user
 */
     static getID( id )
     {
