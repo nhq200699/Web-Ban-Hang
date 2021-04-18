@@ -49,7 +49,7 @@ module.exports = class user extends USER_COLL{
     })
 }
  /*
-        UPDATE INFORMATION USER TO DATABASES
+        Cập nhật thông tin user
 */
 
 static update({ id, name, phone, email, sex }) {
@@ -79,7 +79,7 @@ static update({ id, name, phone, email, sex }) {
 }
 
  /*
-        REMOVE ONE INFOMATION USER IN DATABASE OF TABLE USER 
+        xóa thông tin user
 */
 static remove( id )
     {
