@@ -7,7 +7,7 @@ const { sign, verify } = require('../utils/jwt');
 const { profile } = require('console');
 
 /*
-    INSERT NEW INFOMATION USER TO DATABASE 
+    Thêm thông tin người dùng mới vào Database.
 */
 module.exports = class user extends USER_COLL{
     
