@@ -74,7 +74,7 @@ module.exports = class category extends CATEGORY_COLL{
     }
 
  /*
-        REMOVE CATEGORY IN DATABASE MONGODB 
+        Xóa danh mục 
 */
 
     static remove({ id }){
@@ -90,7 +90,7 @@ module.exports = class category extends CATEGORY_COLL{
     }
 
 /*
-        UPDATE CATEGORY INTO DATABASE MONGODB 
+        Cập nhật danh mục
 */
 
     static update({ id , title , description , avatar }){
