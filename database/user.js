@@ -30,8 +30,8 @@ var userSchema = new Schema({
     }],
     role: {
         type: Number,
-        //1 la admin
-        //0 la custommer
+        //1 la quan tri vien
+        //0 la nguoi dung
         default:0,
     }
     
