@@ -6,7 +6,7 @@ const { resolve } = require('path');
 const category = require('./category');
 const { start } = require('repl');
 const USER_COLL = require('../database/user')
-
+////
 module.exports= class product extends PRODUCT_COLL{
     static insert({title,description, slug,price,amount,avatar,category,gallery,promotion,status}){
         return new Promise(async resolve =>{

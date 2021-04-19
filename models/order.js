@@ -7,7 +7,7 @@ const USER_COLL = require('../database/user');
 
 module.exports= class order extends ORDER_COLL{
  /*
-        REMOVE CATEGORY IN DATABASE MONGODB 
+        Xóa danh mục khỏi CSDL 
 */
     static insert({productsArr,total,address,note,pay,user}){
         return new Promise(async resolve =>{

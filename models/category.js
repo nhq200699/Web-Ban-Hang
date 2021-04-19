@@ -11,7 +11,7 @@ const {renderToView} = require('../utils/checkRouting');
 module.exports = class category extends CATEGORY_COLL{
 
 /*  
-    INSERT CATEGORY INTO DATABASE 
+    Thêm Danh Mục 
 */
                     
     static insertCategoryIntoDataBase({ title , description }){
@@ -37,7 +37,7 @@ module.exports = class category extends CATEGORY_COLL{
     }
 
  /*  
-    GET LIST CATEGORY FROM DATABASE MONGODB 
+    Lấy Ds Danh Mục 
 */
 
     static getList(){
@@ -54,7 +54,7 @@ module.exports = class category extends CATEGORY_COLL{
     }
 
 /*
-        GET DETAIL CATEGORY FROM DATABASE MONGODB 
+        Lấy Thông Tin Chi Tiết Của Danh Mục Đó  
 */
 
     static getId({ id }){
@@ -74,7 +74,7 @@ module.exports = class category extends CATEGORY_COLL{
     }
 
  /*
-        REMOVE CATEGORY IN DATABASE MONGODB 
+        Xóa Danh Mục
 */
 
     static remove({ id }){
@@ -90,7 +90,7 @@ module.exports = class category extends CATEGORY_COLL{
     }
 
 /*
-        UPDATE CATEGORY INTO DATABASE MONGODB 
+        Cập Nhật Danh Mục 
 */
 
     static update({ id , title , description , avatar }){
@@ -109,7 +109,7 @@ module.exports = class category extends CATEGORY_COLL{
     }
 
 /*
-      SEARCH CATEGORY FROM DATABASE MONGODB 
+      Tìm Kiếm Danh Mục 
 */
 
     static search( search ){

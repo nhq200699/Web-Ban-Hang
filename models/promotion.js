@@ -4,7 +4,7 @@ const PROMOTION_COLL= require('../database/promotion');
 const { renderToView } = require('../utils/checkRouting');
 const ObjectID = require('mongoose').Types.ObjectId;
 const {uploadMulter}      = require('../utils/config_multer')
-
+//////
 module.exports= class promotion extends PROMOTION_COLL{
     static insert({title,content,percent,avatar,status}){
         return new Promise(async resolve =>{
