@@ -7,7 +7,7 @@ const { sign, verify } = require('../utils/jwt');
 const { profile } = require('console');
 
 /*
-    INSERT NEW INFOMATION USER TO DATABASE 
+    Thêm thông tin người dùng mới vào Database.
 */
 module.exports = class user extends USER_COLL{
     
@@ -17,7 +17,7 @@ module.exports = class user extends USER_COLL{
 
    
 /*
-        GET LIST INFORMATION USER FROM DATABASE IN TABLE USER
+        Lấy thông tin danh sách người dùng
 */
     static getList(){
         return new Promise(async resolve =>{
@@ -34,7 +34,7 @@ module.exports = class user extends USER_COLL{
         })
     }
  /*
-        GET ONE OBJECT  INFOMATION USER IN DATABASE
+        Lấy thông tin của 1 user
 */
     static getID( id )
     {
@@ -49,7 +49,7 @@ module.exports = class user extends USER_COLL{
     })
 }
  /*
-        UPDATE INFORMATION USER TO DATABASES
+        Cập nhật thông tin user
 */
 
 static update({ id, name, phone, email, sex }) {
@@ -79,7 +79,7 @@ static update({ id, name, phone, email, sex }) {
 }
 
  /*
-        REMOVE ONE INFOMATION USER IN DATABASE OF TABLE USER 
+        xóa thông tin user
 */
 static remove( id )
     {
