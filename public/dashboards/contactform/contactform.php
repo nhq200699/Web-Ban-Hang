@@ -15,7 +15,7 @@
   $contactform = new PHP_Mail_Form;
   $contactform->ajax = true;
 
-  // Edit address info.
+  // Edit address info...
   $contactform->to = 'contact@example.com';
   $contactform->from_name = $_POST['name'];
   $contactform->from_email = $_POST['email'];
